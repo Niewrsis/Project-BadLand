@@ -1,11 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
+using InputSystem;
+using PlayerSystem;
 using UnityEngine;
 
 namespace Core
 {
     public class Bootstrapper : MonoBehaviour
     {
-        //TODO: Bootstrapper logic
+        [Header("References")]
+        [SerializeField] private Player _player;
+        [SerializeField] private InputListener _inputListener;
+
+        private void Awake()
+        {
+            _inputListener.Construct(_player);
+        }
     }
 }
