@@ -22,8 +22,11 @@ namespace InputSystem
 
         private void Update()
         {
-            ReadMoveInput();
             ReadJumpInput();
+        }
+        private void FixedUpdate()
+        {
+            ReadMoveInput();
         }
         private void ReadMoveInput()
         {
