@@ -9,10 +9,12 @@ namespace Core
         [Header("References")]
         [SerializeField] private Player _player;
         [SerializeField] private InputListener _inputListener;
+        [SerializeField] private PlayerRotating _playerRotating;
 
         private void Awake()
         {
-            _inputListener.Construct(_player);
+            _inputListener.Construct(_player, _playerRotating);
+            _playerRotating.Construct(_player);
         }
     }
 }

@@ -1,6 +1,4 @@
 using PlayerSystem;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace InputSystem
@@ -9,10 +7,11 @@ namespace InputSystem
     {
         private Player _player;
         private PlayerMovement _playerMovement;
-
-        public void Construct(Player player)
+        private PlayerRotating _playerRotataing;
+        public void Construct(Player player, PlayerRotating playerRotating)
         {
             _player = player;
+            _playerRotataing = playerRotating;
         }
 
         private void Start()
@@ -36,7 +35,10 @@ namespace InputSystem
         private void ReadJumpInput()
         {
             if (Input.GetKeyDown(KeyCode.Space))
+            {
                 _playerMovement.Jump(_player);
+                _playerRotataing.RotateAfterJump();
+            }
         }
     }
 }
