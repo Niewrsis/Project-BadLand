@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.8525, y: 2.676, z: 0}
-  m_LocalScale: {x: 0.7132771, y: 3.208, z: 1}
+  m_LocalScale: {x: 0.8265407, y: 4.30957, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 0.1
-  startPosition: {x: -7, y: 2.75}
-  endPosition: {x: -2, y: 2.75}
+  startPosition: {x: 2, y: -2.75}
+  endPosition: {x: 2, y: -7.25}
   speed: 1
+  isDeadly: 1

@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 1985622783763101897}
   - component: {fileID: 675404619794278811}
   - component: {fileID: 3698245684130898184}
+  - component: {fileID: -6935109029794361906}
   m_Layer: 6
-  m_Name: StaticUnbreakable
+  m_Name: Rotating
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -130,3 +131,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-6935109029794361906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5548734385001336386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 177755ecad21407458e1a1318f250ea7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotating: {x: 0, y: 0, z: 0}
+  rotatingDuration: 0

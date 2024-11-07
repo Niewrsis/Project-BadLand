@@ -8,7 +8,6 @@ namespace WallsSystem
         [SerializeField] private Vector2 startPosition;
         [SerializeField] private Vector2 endPosition;
         [SerializeField] private float speed;
-        [SerializeField] private bool isDeadly;
 
         private int index;
 
@@ -20,12 +19,12 @@ namespace WallsSystem
         {
             if (index == 0)
             {
-                transform.position = Vector2.Lerp(transform.position, endPosition, speed * Time.deltaTime);
+                transform.localPosition = Vector2.Lerp(transform.localPosition, endPosition, speed * Time.deltaTime);
                 CheckPosition();
             }
             else
             {
-                transform.position = Vector2.Lerp(transform.position, startPosition, speed * Time.deltaTime);
+                transform.localPosition = Vector2.Lerp(transform.localPosition, startPosition, speed * Time.deltaTime);
                 CheckPosition();
             }
         }
@@ -33,26 +32,18 @@ namespace WallsSystem
         {
             if(index == 0)
             {
-                if(Vector2.Distance(transform.position, endPosition) <= offset)
+                if(Vector2.Distance(transform.localPosition, endPosition) <= offset)
                 {
                     index++;
                 }
             }
             else if (index == 1)
             {
-                if (Vector2.Distance(transform.position, startPosition) <= offset)
+                if (Vector2.Distance(transform.localPosition, startPosition) <= offset)
                 {
                     index--;
                 }
             }
-        }
-        private void OnCollisionEnter2D(Collision2D collision)
-        {
-            if (isDeadly == false) return;
-            if (!collision.collider.CompareTag("Player")) return;
-
-            //TODO: Restart logic
-            Time.timeScale = 0f;
         }
     }
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7494744305973301580}
   - component: {fileID: 8255390252171276279}
   - component: {fileID: 8928969388436000153}
+  - component: {fileID: 1297486449159962701}
   m_Layer: 0
   m_Name: SizeUp
   m_TagString: Untagged
@@ -114,9 +115,24 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &1297486449159962701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4049210833153870254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94f0466aa5cc6c04f9377b6bd33e77c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isBigger: 1
+  sizeMultiplier: 0.5
+  massMultiplier: 0.5
