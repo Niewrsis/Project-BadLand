@@ -481,6 +481,10 @@ PrefabInstance:
       value: 1.05
       objectReference: {fileID: 0}
     - target: {fileID: -7178961591535189485, guid: 21c82fedf96b44340b958a6e1e6bfb4e, type: 3}
+      propertyPath: rotationStep
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: -7178961591535189485, guid: 21c82fedf96b44340b958a6e1e6bfb4e, type: 3}
       propertyPath: groundMask.m_Bits
       value: 64
       objectReference: {fileID: 0}

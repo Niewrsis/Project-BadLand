@@ -8,6 +8,10 @@ namespace PlayerSystem
         [SerializeField] private LayerMask groundMask;
         [SerializeField] private float groundRadius;
 
+        [Header("Attrubutes")]
+        [SerializeField] private float rotationStep;
+
+        private const float _circleDegrees = 360;
         private Player _player;
         private bool _isGround;
         public void Construct(Player player)
@@ -21,7 +25,30 @@ namespace PlayerSystem
         public void RotateAfterJump()
         {
             _player.Rb.angularVelocity = 0;
-            transform.rotation = Quaternion.Euler(new Vector3(transform.rotation.x, transform.rotation.y, 0));
+            if (DoMathAngle(_player.Rb.rotation) > 0)
+            {
+                _player.Rb.SetRotation(DoMathAngle(_player.Rb.rotation) - rotationStep);
+
+                if (_player.Rb.rotation <= rotationStep &  _player.Rb.rotation >= -rotationStep) _player.Rb.SetRotation(0);
+            }
+            else
+            {
+                _player.Rb.SetRotation(DoMathAngle(_player.Rb.rotation) + rotationStep);
+
+                if (_player.Rb.rotation <= rotationStep & _player.Rb.rotation >= -rotationStep) _player.Rb.SetRotation(0);
+            }
+        }
+        private float DoMathAngle(float num)
+        {
+            int a = Mathf.RoundToInt(num / _circleDegrees);
+            if (num > 0)
+            {
+                return (float)(num - _circleDegrees * a);
+            }
+            else
+            {
+                return (float)(num - _circleDegrees * a);
+            }
         }
     }
 }
