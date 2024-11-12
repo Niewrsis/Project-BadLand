@@ -1,3 +1,4 @@
+using CameraSystem;
 using InputSystem;
 using PlayerSystem;
 using UnityEngine;
@@ -7,14 +8,16 @@ namespace Core
     public class Bootstrapper : MonoBehaviour
     {
         [Header("References")]
-        [SerializeField] private Player _player;
-        [SerializeField] private InputListener _inputListener;
+        [SerializeField] private InputListener inputListener;
+        [SerializeField] private CameraFollow cameraFollow;
         [SerializeField] private PlayerRotating _playerRotating;
+        [SerializeField] private Player _player;
 
         private void Awake()
-        {
-            _inputListener.Construct(_player, _playerRotating);
+        {   
+            cameraFollow.Construct(GameManager.Instance.player.transform);
             _playerRotating.Construct(_player);
+            inputListener.Construct(_player, _playerRotating);
         }
     }
 }

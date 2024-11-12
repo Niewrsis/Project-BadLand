@@ -102,9 +102,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c21fccd4ffaed4546a6d2fbfcd7a4af3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 0
-  JumpForce: 0
-  RotationSpeed: 0
+  MoveSpeed: 5
+  JumpForce: 10
 --- !u!114 &-7178961591535189485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,11 +116,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d86fc129d42d988488e666b2fdb54a35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundCheck: {fileID: 0}
   groundMask:
     serializedVersion: 2
-    m_Bits: 0
-  groundRadius: 0
+    m_Bits: 64
+  groundRadius: 1.05
+  rotationStep: 10
 --- !u!50 &3125458595098520280
 Rigidbody2D:
   serializedVersion: 4

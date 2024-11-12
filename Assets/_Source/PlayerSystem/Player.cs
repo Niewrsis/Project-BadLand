@@ -13,9 +13,9 @@ namespace PlayerSystem
         public Transform Transform => transform;
         public Rigidbody2D Rb => _rb;
 
-        private void Start()
+        private void Awake()
         {
             _rb = GetComponent<Rigidbody2D>();
-        }
+        }  
     }
 }
