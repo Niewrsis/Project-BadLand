@@ -140,17 +140,29 @@ PrefabInstance:
       propertyPath: rotatingDuration
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 675404619794278811, guid: 87a82df7eab254349938f39cd878142f, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 675404619794278811, guid: 87a82df7eab254349938f39cd878142f, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 675404619794278811, guid: 87a82df7eab254349938f39cd878142f, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1985622783763101897, guid: 87a82df7eab254349938f39cd878142f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 17.789062
+      value: 18.693562
       objectReference: {fileID: 0}
     - target: {fileID: 1985622783763101897, guid: 87a82df7eab254349938f39cd878142f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.06
+      value: 3.21
       objectReference: {fileID: 0}
     - target: {fileID: 1985622783763101897, guid: 87a82df7eab254349938f39cd878142f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.59
+      value: -0.0192
       objectReference: {fileID: 0}
     - target: {fileID: 1985622783763101897, guid: 87a82df7eab254349938f39cd878142f, type: 3}
       propertyPath: m_LocalPosition.z
