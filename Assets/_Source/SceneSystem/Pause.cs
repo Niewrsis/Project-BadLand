@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,7 +21,7 @@ namespace SceneSystem
         }
         private void ContinueGame()
         {
-            Time.timeScale = 1f;
+            Time.timeScale = GlobalValues.STANDART_GAME_TIME;
             pauseObj.SetActive(false);
         }
         private void PauseGame()
@@ -33,8 +31,8 @@ namespace SceneSystem
         }
         private void RestartGame()
         {
-            Time.timeScale = 1f;
-            PlayerPrefs.SetInt("level_index", 1);
+            Time.timeScale = GlobalValues.STANDART_GAME_TIME;
+            PlayerPrefs.SetInt(GlobalValues.LEVEL_INDEX_PP, 1);
             pauseObj.SetActive(false);
             ReloadScene.RestartScene();
         }

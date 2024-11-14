@@ -2,7 +2,7 @@ using UnityEngine.SceneManagement;
 
 namespace SceneSystem
 {
-    public class ReloadScene
+    public static class ReloadScene
     {
         public static void RestartScene()
         {

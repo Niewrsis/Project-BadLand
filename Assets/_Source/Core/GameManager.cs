@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Core
@@ -37,11 +35,11 @@ namespace Core
 
             if (levelLength <= 0)
             {
-                PlayerPrefs.SetInt("level_index", levelLength);
+                PlayerPrefs.SetInt(GlobalValues.LEVEL_INDEX_PP, levelLength);
             }
             else
             {
-                levelLength = PlayerPrefs.GetInt("level_index");
+                levelLength = PlayerPrefs.GetInt(GlobalValues.LEVEL_INDEX_PP);
             }
             SpawnRandomLevel();
             SpawnPlayer();

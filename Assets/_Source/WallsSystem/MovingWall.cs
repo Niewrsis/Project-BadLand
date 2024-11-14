@@ -4,6 +4,7 @@ namespace WallsSystem
 {
     public class MovingWall : MonoBehaviour
     {
+        [Header("Settings")]
         [SerializeField] private float offset;
         [SerializeField] private Vector2 startPosition;
         [SerializeField] private Vector2 endPosition;

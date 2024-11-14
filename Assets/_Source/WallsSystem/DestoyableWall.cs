@@ -5,6 +5,7 @@ namespace WallsSystem
     [RequireComponent(typeof(SpriteRenderer), typeof(BoxCollider2D))]
     public class DestoyableWall : MonoBehaviour
     {
+        [Header("Settings")]
         [SerializeField] private Color color;
         [SerializeField] private float massRequire;
 
@@ -17,7 +18,7 @@ namespace WallsSystem
         }
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (!collision.collider.CompareTag("Player")) return;
+            if (!collision.collider.CompareTag(GlobalValues.PLAYER_TAG)) return;
 
             if (collision.collider.GetComponent<Rigidbody2D>().mass >= massRequire)
             {

@@ -1,6 +1,4 @@
 using SceneSystem;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Finish
@@ -10,14 +8,14 @@ namespace Finish
         private int _levelIndex;
         private void Start()
         {
-            _levelIndex = PlayerPrefs.GetInt("level_index");
+            _levelIndex = PlayerPrefs.GetInt(GlobalValues.LEVEL_INDEX_PP);
         }
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (!collision.CompareTag("Player")) return;
+            if (!collision.CompareTag(GlobalValues.PLAYER_TAG)) return;
 
             _levelIndex++;
-            PlayerPrefs.SetInt("level_index", _levelIndex);
+            PlayerPrefs.SetInt(GlobalValues.LEVEL_INDEX_PP, _levelIndex);
             ReloadScene.RestartScene();
         }
     }

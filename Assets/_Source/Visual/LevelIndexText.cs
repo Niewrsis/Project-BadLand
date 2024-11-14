@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -11,7 +9,7 @@ namespace Visual
         [SerializeField] private TextMeshProUGUI levelIndexText;
         private void Start()
         {
-            levelIndexText.text = PlayerPrefs.GetInt("level_index").ToString();
+            levelIndexText.text = PlayerPrefs.GetInt(GlobalValues.LEVEL_INDEX_PP).ToString();
         }
     }
 }

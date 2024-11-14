@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,6 +6,7 @@ namespace SceneSystem
 {
     public class RestartGame : MonoBehaviour
     {
+        [Header("References")]
         [SerializeField] private TextMeshProUGUI scoreText;
         [SerializeField] private Button restartButton;
 
@@ -18,11 +17,11 @@ namespace SceneSystem
         }
         private void ScoreText()
         {
-            scoreText.text = PlayerPrefs.GetInt("level_index").ToString();
+            scoreText.text = PlayerPrefs.GetInt(GlobalValues.LEVEL_INDEX_PP).ToString();
         }
         private void Restart()
         {
-            PlayerPrefs.SetInt("level_index", 1);
+            PlayerPrefs.SetInt(GlobalValues.LEVEL_INDEX_PP, 1);
             ReloadScene.RestartScene();
             Time.timeScale = 1f;
             Destroy(gameObject);
