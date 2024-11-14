@@ -13,8 +13,8 @@ namespace Core
         [SerializeField] private PlayerRotating _playerRotating;
         [SerializeField] private Player _player;
 
-        private void Awake()
-        {   
+        private void Start()
+        {
             cameraFollow.Construct(GameManager.Instance.player.transform);
             _playerRotating.Construct(_player);
             inputListener.Construct(_player, _playerRotating);

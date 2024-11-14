@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
@@ -7,6 +6,7 @@ namespace WallsSystem
 {
     public class RotatingWall : MonoBehaviour
     {
+        [Header("Settings")]
         [SerializeField] private float rotatingDuration;
         [SerializeField] private bool isClockwise;
 
@@ -32,6 +32,10 @@ namespace WallsSystem
             transform.DORotate(new Vector3(0,0,transform.rotation.z + 180), rotatingDuration, RotateMode.LocalAxisAdd);
             yield return new WaitForSeconds(rotatingDuration);
             StartCoroutine(Counterclockwise());
+        }
+        private void OnDestroy()
+        {
+            StopAllCoroutines();
         }
     }
 }

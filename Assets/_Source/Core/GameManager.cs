@@ -21,8 +21,6 @@ namespace Core
         [SerializeField] private float offsetX;
         [SerializeField] private Vector2 startSpawn;
 
-        public int LevelIndex { get; private set; }
-
         private int _randomStart;
 
         private void Awake()
@@ -34,6 +32,14 @@ namespace Core
 
             _randomStart = UnityEngine.Random.Range(0, startPrefabs.Length);
 
+            if (levelLength <= 0)
+            {
+                PlayerPrefs.SetInt("level_index", levelLength);
+            }
+            else
+            {
+                levelLength = PlayerPrefs.GetInt("level_index");
+            }
             SpawnRandomLevel();
             SpawnPlayer();
         }
