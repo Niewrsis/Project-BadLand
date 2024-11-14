@@ -9,6 +9,7 @@ namespace InputSystem
         private Player _player;
         private PlayerMovement _playerMovement;
         private PlayerRotating _playerRotataing;
+        private Pause _pause;
         public void Construct(Player player, PlayerRotating playerRotating)
         {
             _player = player;
