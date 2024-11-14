@@ -9,11 +9,14 @@ namespace Core
     {
         public static GameManager Instance;
 
+        public Action OnPlayerDeath;
+
         [Header("References")]
         public GameObject player;
         [SerializeField] private GameObject[] startPrefabs;
         [SerializeField] private GameObject[] levelPrefabs;
         [SerializeField] private GameObject[] finishPrefabs;
+        [SerializeField] private GameObject restartPrefab;
 
         [Header("Settings")]
         [SerializeField] private int levelLength;
@@ -43,6 +46,10 @@ namespace Core
             SpawnRandomLevel();
             SpawnPlayer();
         }
+        private void Start()
+        {
+            OnPlayerDeath += GameOver;
+        }
         private void SpawnPlayer()
         {
             player.transform.position = new Vector2(startSpawn.x, playerOffsetY);
@@ -66,6 +73,15 @@ namespace Core
             int randomFinish = UnityEngine.Random.Range(0, finishPrefabs.Length);
             previuosPostition = new Vector2(previuosPostition.x + offsetX, previuosPostition.y);
             Instantiate(finishPrefabs[randomFinish], previuosPostition, Quaternion.identity);
+        }
+        private void GameOver()
+        {
+            Instantiate(restartPrefab);
+            Time.timeScale = 0f;
+        }
+        private void OnDisable()
+        {
+            OnPlayerDeath -= GameOver;
         }
     }
 }

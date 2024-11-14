@@ -4,7 +4,7 @@ namespace SceneSystem
 {
     public class ReloadScene
     {
-        public void RestartScene()
+        public static void RestartScene()
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }

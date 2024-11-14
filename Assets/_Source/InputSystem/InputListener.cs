@@ -9,7 +9,6 @@ namespace InputSystem
         private Player _player;
         private PlayerMovement _playerMovement;
         private PlayerRotating _playerRotataing;
-        private ReloadScene _restartScene;
         public void Construct(Player player, PlayerRotating playerRotating)
         {
             _player = player;
@@ -19,7 +18,6 @@ namespace InputSystem
         private void Start()
         {
             _playerMovement = new();
-            _restartScene = new();
         }
 
         private void Update()
@@ -47,7 +45,7 @@ namespace InputSystem
         private void ReadRestartInput()
         {
             if (Input.GetKeyDown(KeyCode.R))
-                _restartScene.RestartScene();
+                ReloadScene.RestartScene();
         }
     }
 }

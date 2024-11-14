@@ -473,6 +473,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7178961591535189485, guid: 21c82fedf96b44340b958a6e1e6bfb4e, type: 3}
+      propertyPath: rotationStep
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3662519842289572792, guid: 21c82fedf96b44340b958a6e1e6bfb4e, type: 3}
       propertyPath: m_Name
       value: Player
@@ -903,6 +907,10 @@ PrefabInstance:
       propertyPath: startSpawn.y
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3879739246886959519, guid: 695eee984e984924496dd82c59aa6bb6, type: 3}
+      propertyPath: restartPrefab
+      value: 
+      objectReference: {fileID: 8264809314313603897, guid: e3ef5f9c9689beb4ea2f9509456d8b5b, type: 3}
     - target: {fileID: 3879739246886959519, guid: 695eee984e984924496dd82c59aa6bb6, type: 3}
       propertyPath: levelPrefabs.Array.size
       value: 3

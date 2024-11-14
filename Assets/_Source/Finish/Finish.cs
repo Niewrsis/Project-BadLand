@@ -7,7 +7,6 @@ namespace Finish
 {
     public class Finish : MonoBehaviour
     {
-        private ReloadScene _reloadScene = new();
         private int _levelIndex;
         private void Start()
         {
@@ -19,7 +18,7 @@ namespace Finish
 
             _levelIndex++;
             PlayerPrefs.SetInt("level_index", _levelIndex);
-            _reloadScene.RestartScene();
+            ReloadScene.RestartScene();
         }
     }
 }

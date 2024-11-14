@@ -1,3 +1,4 @@
+using Core;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,6 @@ public class DeadlyWall : MonoBehaviour
     {
         if (!collision.collider.CompareTag("Player")) return;
 
-        //TODO: Restart logic
-        Time.timeScale = 0f;
+        GameManager.Instance.OnPlayerDeath?.Invoke();
     }
 }
