@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BuffsSystem.Sizer" Collapsed="true">
+    <Position X="4" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAIAAAAAAAAAAEAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\_Source\BuffsSystem\Sizer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraSystem.CameraFollow" Collapsed="true">
+    <Position X="2.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAgAAAAAAAAAAAQAAAAAAAAAAEACAAAAA=</HashCode>
+      <FileName>Assets\_Source\CameraSystem\CameraFollow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.Bootstrapper" Collapsed="true">
+    <Position X="0.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACACAAAAAAAAAACACAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Assets\_Source\Core\Bootstrapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.GameManager" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAJYACAAkACAAAAAAAAAIAAAAEAJSEAAAAAAAUA=</HashCode>
+      <FileName>Assets\_Source\Core\GameManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Finish.Finish" Collapsed="true">
+    <Position X="7.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\_Source\Finish\Finish.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GlobalValues" Collapsed="true">
+    <Position X="2.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Assets\_Source\GlobalValues.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeadlyWall" Collapsed="true">
+    <Position X="4" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Assets\_Source\WallsSystem\DeadlyWall.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InputSystem.InputListener" Collapsed="true">
+    <Position X="4" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAABiAAgAAAAASACAAAAAAAIAAAAACAAAAQAAA=</HashCode>
+      <FileName>Assets\_Source\InputSystem\InputListener.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerSystem.Player" Collapsed="true">
+    <Position X="2.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAABAQAAAAAAAAAACBAAAAAAEA=</HashCode>
+      <FileName>Assets\_Source\PlayerSystem\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerSystem.PlayerMovement" Collapsed="true">
+    <Position X="4" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\_Source\PlayerSystem\PlayerMovement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerSystem.PlayerRotating" Collapsed="true">
+    <Position X="5.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAEAoAAAAABACAAAAAAABAAAAACAAAAEAgA=</HashCode>
+      <FileName>Assets\_Source\PlayerSystem\PlayerRotating.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneSystem.Pause" Collapsed="true">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAACAIAIAAIQAAIAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Assets\_Source\SceneSystem\Pause.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneSystem.ReloadScene" Collapsed="true">
+    <Position X="7.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\_Source\SceneSystem\ReloadScene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneSystem.RestartGame" Collapsed="true">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAACAAAQAAAQEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\_Source\SceneSystem\RestartGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Visual.LevelIndexText" Collapsed="true">
+    <Position X="5.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\_Source\Visual\LevelIndexText.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WallsSystem.DestoyableWall" Collapsed="true">
+    <Position X="5.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAICAAAAAAAAAAAAAAAAEAAACAAAAgAAAEAAA=</HashCode>
+      <FileName>Assets\_Source\WallsSystem\DestoyableWall.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WallsSystem.MovingWall" Collapsed="true">
+    <Position X="7.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABCAAAEAAgAAABAAAAAAAAAAAAAAAQAAEAAAAAABAAA=</HashCode>
+      <FileName>Assets\_Source\WallsSystem\MovingWall.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WallsSystem.RotatingWall" Collapsed="true">
+    <Position X="2.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACBgAAAACAAAAAAAIAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Assets\_Source\WallsSystem\RotatingWall.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

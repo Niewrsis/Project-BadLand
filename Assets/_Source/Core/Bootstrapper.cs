@@ -10,14 +10,14 @@ namespace Core
         [Header("References")]
         [SerializeField] private InputListener inputListener;
         [SerializeField] private CameraFollow cameraFollow;
-        [SerializeField] private PlayerRotating _playerRotating;
-        [SerializeField] private Player _player;
+        [SerializeField] private PlayerRotating playerRotating;
+        [SerializeField] private Player player;
 
         private void Start()
         {
             cameraFollow.Construct(GameManager.Instance.player.transform);
-            _playerRotating.Construct(_player);
-            inputListener.Construct(_player, _playerRotating);
+            playerRotating.Construct(player);
+            inputListener.Construct(player, playerRotating);
         }
     }
 }

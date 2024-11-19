@@ -28,27 +28,18 @@ namespace PlayerSystem
             if (DoMathAngle(_player.Rb.rotation) > 0)
             {
                 _player.Rb.SetRotation(DoMathAngle(_player.Rb.rotation) - rotationStep);
-
-                if (_player.Rb.rotation <= rotationStep &  _player.Rb.rotation >= -rotationStep) _player.Rb.SetRotation(0);
             }
             else
             {
                 _player.Rb.SetRotation(DoMathAngle(_player.Rb.rotation) + rotationStep);
-
-                if (_player.Rb.rotation <= rotationStep & _player.Rb.rotation >= -rotationStep) _player.Rb.SetRotation(0);
             }
+
+            if (_player.Rb.rotation <= rotationStep & _player.Rb.rotation >= -rotationStep) _player.Rb.SetRotation(0);
         }
         private float DoMathAngle(float num)
         {
             int a = Mathf.RoundToInt(num / _circleDegrees);
-            if (num > 0)
-            {
-                return (float)(num - _circleDegrees * a);
-            }
-            else
-            {
-                return (float)(num - _circleDegrees * a);
-            }
+            return (float)(num - _circleDegrees * a);
         }
     }
 }

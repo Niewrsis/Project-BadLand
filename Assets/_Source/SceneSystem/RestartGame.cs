@@ -23,8 +23,7 @@ namespace SceneSystem
         {
             PlayerPrefs.SetInt(GlobalValues.LEVEL_INDEX_PP, 1);
             ReloadScene.RestartScene();
-            Time.timeScale = 1f;
-            Destroy(gameObject);
+            Time.timeScale = GlobalValues.STANDART_GAME_TIME;
         }
     }
 }

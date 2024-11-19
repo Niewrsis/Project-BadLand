@@ -15,6 +15,10 @@ namespace CameraSystem
         }
         private void Update()
         {
+            Follow();
+        }
+        private void Follow()
+        {
             transform.position = Vector3.Lerp(new Vector3(transform.position.x, yPosition, -10), new Vector2(_target.position.x, yPosition), followSpeed * Time.deltaTime);
         }
     }

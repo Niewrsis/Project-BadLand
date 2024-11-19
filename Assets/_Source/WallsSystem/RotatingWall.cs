@@ -8,31 +8,24 @@ namespace WallsSystem
     {
         [Header("Settings")]
         [SerializeField] private float rotatingDuration;
-        [SerializeField] private bool isClockwise;
+        [SerializeField] private int offset;
 
         private void Start()
         {
-            if (isClockwise)
-            {
-                StartCoroutine(Clockwise());
-            }
-            else
-            {
-                StartCoroutine(Counterclockwise());
-            }
+            StartCoroutine(Rotate(offset));
         }
-        private IEnumerator Clockwise()
+        private IEnumerator Rotate(int offset)
         {
-            transform.DORotate(new Vector3(0, 0, transform.rotation.z + 180), rotatingDuration, RotateMode.LocalAxisAdd);
+            transform.DORotate(new Vector3(0, 0, transform.rotation.z + offset), rotatingDuration, RotateMode.LocalAxisAdd);
             yield return new WaitForSeconds(rotatingDuration);
-            StartCoroutine(Clockwise());
+            StartCoroutine(Rotate(offset));
         }
-        private IEnumerator Counterclockwise()
+       /* private IEnumerator Counterclockwise()
         {
-            transform.DORotate(new Vector3(0,0,transform.rotation.z + 180), rotatingDuration, RotateMode.LocalAxisAdd);
+            transform.DORotate(new Vector3(0,0,transform.rotation.z - 180), rotatingDuration, RotateMode.LocalAxisAdd);
             yield return new WaitForSeconds(rotatingDuration);
             StartCoroutine(Counterclockwise());
-        }
+        }*/
         private void OnDestroy()
         {
             StopAllCoroutines();

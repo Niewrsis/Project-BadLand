@@ -1499,6 +1499,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1540376871388019799, guid: d46f42de4c7996645bfb55b3b043ef50, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1182770896}
+    - target: {fileID: 1540376871388019799, guid: d46f42de4c7996645bfb55b3b043ef50, type: 3}
       propertyPath: _player
       value: 
       objectReference: {fileID: 1182770896}
@@ -1514,6 +1518,10 @@ PrefabInstance:
       propertyPath: _inputListener
       value: 
       objectReference: {fileID: 6976996403815605442}
+    - target: {fileID: 1540376871388019799, guid: d46f42de4c7996645bfb55b3b043ef50, type: 3}
+      propertyPath: playerRotating
+      value: 
+      objectReference: {fileID: 1182770895}
     - target: {fileID: 1540376871388019799, guid: d46f42de4c7996645bfb55b3b043ef50, type: 3}
       propertyPath: _playerRotating
       value: 

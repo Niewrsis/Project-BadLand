@@ -15,13 +15,17 @@ namespace BuffsSystem
 
             if (isBigger)
             {
-                collision.transform.localScale = new Vector3(collision.transform.localScale.x + sizeMultiplier, collision.transform.localScale.y + sizeMultiplier, collision.transform.localScale.z + sizeMultiplier);
+                collision.transform.localScale = new Vector3(collision.transform.localScale.x + sizeMultiplier, 
+                                                                collision.transform.localScale.y + sizeMultiplier, 
+                                                                collision.transform.localScale.z + sizeMultiplier);
                 collision.GetComponent<Rigidbody2D>().mass += massMultiplier;
                 Destroy(gameObject);
             }
             else
             {
-                collision.transform.localScale = new Vector3(collision.transform.localScale.x - sizeMultiplier, collision.transform.localScale.y - sizeMultiplier, collision.transform.localScale.z - sizeMultiplier);
+                collision.transform.localScale = new Vector3(collision.transform.localScale.x - sizeMultiplier, 
+                                                                collision.transform.localScale.y - sizeMultiplier, 
+                                                                collision.transform.localScale.z - sizeMultiplier);
                 collision.GetComponent<Rigidbody2D>().mass -= massMultiplier;
                 Destroy(gameObject);
             }

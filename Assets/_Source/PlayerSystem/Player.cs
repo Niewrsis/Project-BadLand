@@ -10,12 +10,11 @@ namespace PlayerSystem
         public float JumpForce;
 
         private Rigidbody2D _rb;
-        public Transform Transform => transform;
         public Rigidbody2D Rb => _rb;
 
         private void Awake()
         {
             _rb = GetComponent<Rigidbody2D>();
-        }  
+        }
     }
 }
